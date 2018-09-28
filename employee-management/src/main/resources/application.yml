@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: employeeService
+    
+  datasource:
+    initialize: false
+    url: jdbc:mysql://localhost:3306/emp
+    username: root
+    password: tiger
+    driver-class-name: com.mysql.jdbc.Driver
+    
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+      
+    
+server:
+  port: 8080
+  
+  
+security:
+  oauth2:
+    client:
+      client-id: test
+      client-secret: test-pass
+    resource:
+      token-info-uri: http://demo.polixia.com/oauth/check_token
+      prefer-token-info: true
